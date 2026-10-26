@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hangman</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game">
+    <h1>Hangman</h1>
+
+    <svg id="figure" viewBox="0 0 120 140" aria-label="Hangman drawing">
+      <line x1="10" y1="130" x2="110" y2="130"/>
+      <line x1="30" y1="130" x2="30" y2="10"/>
+      <line x1="30" y1="10" x2="85" y2="10"/>
+      <line x1="85" y1="10" x2="85" y2="25"/>
+      <circle class="part" cx="85" cy="35" r="10"/>
+      <line class="part" x1="85" y1="45" x2="85" y2="85"/>
+      <line class="part" x1="85" y1="55" x2="70" y2="72"/>
+      <line class="part" x1="85" y1="55" x2="100" y2="72"/>
+      <line class="part" x1="85" y1="85" x2="72" y2="108"/>
+      <line class="part" x1="85" y1="85" x2="98" y2="108"/>
+    </svg>
+
+    <p id="word" class="word"></p>
+    <p id="message" class="message"></p>
+    <p class="lives">Wrong guesses left: <span id="lives">6</span></p>
+
+    <div id="keyboard" class="keyboard"></div>
+
+    <button id="restart">New Game</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

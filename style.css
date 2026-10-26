@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f0f4f8;
+  color: #222;
+}
+
+.game {
+  width: 100%;
+  max-width: 420px;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin: 0 0 10px;
+}
+
+#figure {
+  width: 160px;
+  height: auto;
+}
+
+#figure line,
+#figure circle {
+  stroke: #333;
+  stroke-width: 4;
+  stroke-linecap: round;
+  fill: none;
+}
+
+#figure .part {
+  display: none;
+}
+
+#figure .part.show {
+  display: inline;
+}
+
+.word {
+  font-size: 2rem;
+  letter-spacing: 0.4rem;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.message {
+  min-height: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.message.win {
+  color: #1a8f3c;
+}
+
+.message.lose {
+  color: #c62828;
+}
+
+.lives {
+  margin: 8px 0 14px;
+}
+
+.keyboard {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.keyboard button {
+  padding: 10px 0;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  background: #2f6fed;
+  color: #fff;
+  cursor: pointer;
+}
+
+.keyboard button:disabled {
+  background: #b0b8c4;
+  cursor: not-allowed;
+}
+
+.keyboard button.correct {
+  background: #1a8f3c;
+}
+
+.keyboard button.wrong {
+  background: #c62828;
+}
+
+#restart {
+  padding: 10px 24px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  background: #222;
+  color: #fff;
+  cursor: pointer;
+}
